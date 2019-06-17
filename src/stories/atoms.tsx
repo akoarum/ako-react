@@ -2,8 +2,9 @@ import React from 'react'
 
 import { storiesOf } from '@storybook/react'
 import { withInfo } from '@storybook/addon-info'
-import { withKnobs, text, number, boolean } from '@storybook/addon-knobs'
+import { withKnobs, text, number, boolean, select } from '@storybook/addon-knobs'
 import { action } from '@storybook/addon-actions'
+import InputText from '../components/atoms/InputText'
 import Label from '../components/atoms/Label'
 import Texts from '../components/atoms/Texts'
 import Heading from '../components/atoms/Heading'
@@ -46,5 +47,19 @@ storiesOf('Atoms', module)
     const label = text('ラベル', 'ラベル')
     return (
       <Label htmlFor="name" id="label">{label}</Label>
+    )
+  }, { info: {} })
+  .add('InputText', () => {
+    const type = select('type', {
+      text: 'text',
+      number: 'number',
+      email: 'email',
+      tel: 'tel',
+      password: 'password'
+    }, 'text')
+    let value = ''
+
+    return (
+      <InputText name={'name'} type={type} value={value} onInput={action('input')} onFocus={action('focus')} onBlur={action('blur')} />
     )
   }, { info: {} })
