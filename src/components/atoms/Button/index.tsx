@@ -11,37 +11,7 @@ type Props = {
   onClick?: any
 }
 
-export const Button: React.FC<Props> = props => {
-  const classes: string[] = []
-
-  if (props.className) {
-    classes.push(props.className)
-  }
-
-  if (props.secondary) {
-    classes.push('-secondary')
-  }
-
-  if (props.caution) {
-    classes.push('-caution')
-  }
-
-  if (props.small) {
-    classes.push('-small')
-  }
-
-  return (
-    <button
-      className={classes.join(' ')}
-      disabled={props.disabled}
-      onClick={props.onClick}
-    >
-      {props.children}
-    </button>
-  )
-}
-
-export default styled(Button)`
+export const StyledButton = styled.button`
   display: inline-block;
   border-radius: 2px;
   box-sizing: border-box;
@@ -93,3 +63,35 @@ export default styled(Button)`
     padding: 10px 16px 9px;
   }
 `
+
+export const Button: React.FC<Props> = props => {
+  const classes: string[] = []
+
+  if (props.className) {
+    classes.push(props.className)
+  }
+
+  if (props.secondary) {
+    classes.push('-secondary')
+  }
+
+  if (props.caution) {
+    classes.push('-caution')
+  }
+
+  if (props.small) {
+    classes.push('-small')
+  }
+
+  return (
+    <StyledButton
+      className={classes.join(' ')}
+      disabled={props.disabled}
+      onClick={props.onClick}
+    >
+      {props.children}
+    </StyledButton>
+  )
+}
+
+export default Button
