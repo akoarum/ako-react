@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Heading initialize snapshot 1`] = `
+<div
+  className="sc-bdVaJa kRmqUI"
+>
+  <h2
+    className="-lv2"
+  >
+    テキスト
+  </h2>
+</div>
+`;
