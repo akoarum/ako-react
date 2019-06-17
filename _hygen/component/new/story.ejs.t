@@ -7,4 +7,4 @@ to: '<%= story ? `src/stories/${category}.tsx` : null %>'
     return (
       <<%= name %> />
     )
-  }), { info: {} })
+  }, { info: {} })
