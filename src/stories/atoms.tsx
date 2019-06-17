@@ -4,6 +4,7 @@ import { storiesOf } from '@storybook/react'
 import { withInfo } from '@storybook/addon-info'
 import { withKnobs, text, number, boolean } from '@storybook/addon-knobs'
 import { action } from '@storybook/addon-actions'
+import Label from '../components/atoms/Label'
 import Texts from '../components/atoms/Texts'
 import Heading from '../components/atoms/Heading'
 
@@ -39,5 +40,11 @@ storiesOf('Atoms', module)
 
     return (
       <Texts caution={caution} small={small}>{texts}</Texts>
+    )
+  }, { info: {} })
+  .add('Label', () => {
+    const label = text('ラベル', 'ラベル')
+    return (
+      <Label htmlFor="name" id="label">{label}</Label>
     )
   }, { info: {} })
