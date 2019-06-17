@@ -4,7 +4,8 @@ import { storiesOf } from '@storybook/react'
 import { withInfo } from '@storybook/addon-info'
 import { withKnobs, text, number, boolean } from '@storybook/addon-knobs'
 import { action } from '@storybook/addon-actions'
-import Heading from '~/components/atoms/Heading'
+import Texts from '../components/atoms/Texts'
+import Heading from '../components/atoms/Heading'
 
 import Button from '../components/atoms/Button'
 
@@ -29,5 +30,14 @@ storiesOf('Atoms', module)
     const visual = number('見た目のレベル', 2)
     return (
       <Heading level={level} visual={visual}>{texts}</Heading>
+    )
+  }, { info: {} })
+  .add('Texts', () => {
+    const texts = text('テキスト', '吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。')
+    const caution = boolean('エラー文', false)
+    const small = boolean('小サイズ', false)
+
+    return (
+      <Texts caution={caution} small={small}>{texts}</Texts>
     )
   }, { info: {} })
