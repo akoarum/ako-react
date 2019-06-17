@@ -3,7 +3,7 @@ to: '<%= test ? `src/components/${category}/${name}/${name}.spec.js` : null %>'
 ---
 import React from 'react'
 import renderer from 'react-test-renderer'
-import <%= name %> from '~/components/<%= category %>/<%= name %>'
+import <%= name %> from './index'
 
 describe('<%= name %>', () => {
   let wrapper

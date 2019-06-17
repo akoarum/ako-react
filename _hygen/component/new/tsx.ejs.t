@@ -6,12 +6,14 @@ import * as React from 'react'
 import * as style from '../../../utils/style'
 
 type Props = {
-  className: string
+  className?: string
 }
+
+export const Styled<%= name %> = styled.div`
+`
 
 export const <%= name %>: React.FC<Props> = ({ className }) => {
-  return <div className={className} />
+  return <Styled<%= name %> className={className} />
 }
 
-export default styled(<%= name %>)`
-`
+export default <%= name %>
