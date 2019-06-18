@@ -5,6 +5,7 @@ import * as style from '../../../utils/style'
 type Props = {
   className?: string
   type: string
+  name: string
   value: string
   id?: string
   placeholder?: string
