@@ -4,6 +4,7 @@ import { storiesOf } from '@storybook/react'
 import { withInfo } from '@storybook/addon-info'
 import { withKnobs, text, number, boolean, select } from '@storybook/addon-knobs'
 import { action } from '@storybook/addon-actions'
+import Checkbox from '../components/atoms/Checkbox'
 import Radio from '../components/atoms/Radio'
 import Select from '../components/atoms/Select'
 import Textarea from '../components/atoms/Textarea'
@@ -88,5 +89,10 @@ storiesOf('Atoms', module)
   .add('Radio', () => {
     return (
       <Radio name="name" value="value" onChange={action('change')}>項目1</Radio>
+    )
+  }, { info: {} })
+  .add('Checkbox', () => {
+    return (
+      <Checkbox name="name" value="value" onChange={action('change')}>項目1</Checkbox>
     )
   }, { info: {} })

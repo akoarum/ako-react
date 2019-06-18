@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Checkbox initialize snapshot 1`] = `
+<label
+  className="sc-bdVaJa gMhCu"
+>
+  <input
+    className="checkbox__input"
+    name="name"
+    type="checkbox"
+    value="value"
+  />
+  <span
+    className="checkbox__label"
+  >
+    テスト
+  </span>
+</label>
+`;
