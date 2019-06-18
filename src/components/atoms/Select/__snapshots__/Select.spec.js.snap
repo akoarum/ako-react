@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Select initialize snapshot 1`] = `
+<div
+  className="sc-bdVaJa gtKVFJ"
+>
+  <select
+    className="select__content"
+    name="name"
+    value=""
+  >
+    <option
+      value={1}
+    >
+      項目1
+    </option>
+    <option
+      value={2}
+    >
+      項目2
+    </option>
+    <option
+      value={3}
+    >
+      項目3
+    </option>
+  </select>
+</div>
+`;

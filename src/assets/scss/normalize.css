@@ -130,6 +130,7 @@ textarea {
 
 select {
   box-shadow: none;
+  -webkit-appearance: none;
   appearance: none;
   background: #fff;
 }

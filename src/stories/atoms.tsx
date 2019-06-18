@@ -4,6 +4,7 @@ import { storiesOf } from '@storybook/react'
 import { withInfo } from '@storybook/addon-info'
 import { withKnobs, text, number, boolean, select } from '@storybook/addon-knobs'
 import { action } from '@storybook/addon-actions'
+import Select from '../components/atoms/Select'
 import Textarea from '../components/atoms/Textarea'
 import InputText from '../components/atoms/InputText'
 import Label from '../components/atoms/Label'
@@ -68,5 +69,18 @@ storiesOf('Atoms', module)
     let value = ''
     return (
       <Textarea name="name" value={value} onInput={action('input')} onFocus={action('focus')} onBlur={action('blur')} />
+    )
+  }, { info: {} })
+  .add('Select', () => {
+    const options = [
+      { id: 1, label: '項目1' },
+      { id: 2, label: '項目2' },
+      { id: 3, label: '項目3' },
+      { id: 4, label: '項目4' }
+    ]
+    const value = ''
+
+    return (
+      <Select name="name" options={options} value={value} onChange={action('change')} onFocus={action('focus')} onBlur={action('blur')} />
     )
   }, { info: {} })
