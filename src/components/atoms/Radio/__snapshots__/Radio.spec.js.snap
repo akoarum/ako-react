@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Radio initialize snapshot 1`] = `
+<label
+  className="sc-bdVaJa isRIPN"
+>
+  <input
+    className="radio__input"
+    name="name"
+    type="radio"
+    value="value"
+  />
+  <span
+    className="radio__label"
+  >
+    テスト
+  </span>
+</label>
+`;

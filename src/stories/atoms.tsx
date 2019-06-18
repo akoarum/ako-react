@@ -4,6 +4,7 @@ import { storiesOf } from '@storybook/react'
 import { withInfo } from '@storybook/addon-info'
 import { withKnobs, text, number, boolean, select } from '@storybook/addon-knobs'
 import { action } from '@storybook/addon-actions'
+import Radio from '../components/atoms/Radio'
 import Select from '../components/atoms/Select'
 import Textarea from '../components/atoms/Textarea'
 import InputText from '../components/atoms/InputText'
@@ -82,5 +83,10 @@ storiesOf('Atoms', module)
 
     return (
       <Select name="name" options={options} value={value} onChange={action('change')} onFocus={action('focus')} onBlur={action('blur')} />
+    )
+  }, { info: {} })
+  .add('Radio', () => {
+    return (
+      <Radio name="name" value="value" onChange={action('change')}>項目1</Radio>
     )
   }, { info: {} })
